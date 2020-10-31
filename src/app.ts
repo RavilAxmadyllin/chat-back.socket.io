@@ -24,7 +24,7 @@ io.on('connect', (socketChannel) => {
         }
 
         socketChannel.on('client-typed', () => {
-            socketChannel.broadcast.emit('user-typing', stateUsers.get(socketChannel))
+            socketChannel.emit('user-typing', stateUsers.get(socketChannel))
         })
     })
 
